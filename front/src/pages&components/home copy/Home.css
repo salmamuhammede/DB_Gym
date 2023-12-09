@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif !important;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .Home {
+    min-height: 100vh;
+    width: 85vw;
+    max-width: 1900px;
+    margin: 0rem auto;
+  }
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    background-color: #f6f6f6;
+  }
+  .Home{
+    background-image: url(../assets/background.png);
+    width: auto;
+    height: auto;
+    background-size: cover;
+  }
+  .rrec{
+    float: left;
+    background: linear-gradient(35deg, #1F1F1F 1.35%, rgba(31, 31, 31, 0.40) 50.67%, rgba(31, 31, 31, 0.00) 100%);
+    width: 50%;
+    height: 745px;
+    flex-shrink: 0;
+  }
+  .lrec{
+    float: left;
+    background: linear-gradient(-35deg, #1F1F1F 1.35%, rgba(31, 31, 31, 0.40) 50.67%, rgba(31, 31, 31, 0.00) 100%);
+    width: 50%;
+    height: 745px;
+    flex-shrink: 0;
+  }
+  .logobg{
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    border-radius: 73px;
+    background: #1F1F1F;
+    width: 436px;
+    height: 249px;
+    flex-shrink: 0;
+  }
+  .logo{
+    width: auto;
+    height: auto;
+    background-size: cover;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+  }
+  .slog{
+    user-select: none;
+    width: auto;
+    height: auto;
+    background-size: cover;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    color: #FFD400;
+    font-family: Bebas Neue;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  

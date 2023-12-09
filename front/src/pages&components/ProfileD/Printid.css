@@ -1,0 +1,83 @@
+
+.ID
+{
+  background-image: url(../assets/bg-id.png);
+  background-size:cover;
+  width: cover;
+  height: 100vh;
+align-items: center;
+}
+.idtrainer
+{
+  position: relative;
+   align-items: center; 
+  left: 25%;
+  top :15%;
+  height: 15vh; 
+  overflow: hidden; 
+  background-color: black;
+  width: 30vw;
+}
+.idtrainerimg
+{
+  margin-top: 20px;
+  width: 100%; /* Adjust image width to fill the container */
+  height: 100%; 
+}
+.centereddivid
+{
+  position: relative;
+    
+  left: 20%;
+  top :15%;
+  height: 32vh; 
+  overflow: hidden; 
+ 
+  width: 50vw;
+}
+.centereddivid p
+{
+  text-align: center;
+  margin: 10px;
+  font-size: 40px;
+}
+.centereddivid2
+{
+  position: relative;
+    
+  left: 20%;
+  top :15%;
+  height: 32vh; 
+  overflow: hidden; 
+ 
+  width: 50vw;
+}
+.centereddivid2 p
+{
+  text-align: center;
+  margin: 10px;
+  font-size: 40px;
+  color:rgb(54, 52, 52)
+}
+.Print {
+  font-size: 1rem;
+  padding: 0.8em 2em;
+  background-color: #000;
+  border: 3px solid yellow;
+  border-radius: 1em;
+  color: #fff;
+  font-weight: bolder;
+  transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
+  box-shadow: -5px 5px 0px 0px yellow;
+}
+
+.Print:hover {
+  transform: translate(5px, -5px);
+
+
+
+}
+
+
+
+

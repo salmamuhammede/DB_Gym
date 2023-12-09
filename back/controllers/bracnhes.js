@@ -2,7 +2,7 @@ import db from '../schema.js'
 
 const branchescontroller={
     fineall:async (req, res) => {
-    const d="SELECT * FROM branches "
+    const d=`SELECT * FROM branches WHERE BID=${70} `
     db.query(d,(err,data)=>{
         if(err)
         return (res.json(err));
@@ -19,7 +19,7 @@ insertBranch:async(req,res)=>{
         if(err)
         return (res.json(err));
         else
-        return (res.json(data));
+        return (res.json("success"));
 
     })
 }

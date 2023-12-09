@@ -1,14 +1,23 @@
 import express from 'express';
 import mysql from 'mysql';
 import cors from "cors"
+import dotenv from 'dotenv';
 const app=express();
 app.use(express.json());
 app.use(cors());
+dotenv.config();
 import branchRouter from './routes/branchrouter.js';
+import traineeRouter from './routes/Traineerouter.js';
+import staffRouter from './routes/Staffrouter.js';
+import trainerRouter from './routes/Trainerrouter.js';
+app.use(express.urlencoded({ extended: true }));
 app.get('/',(re,res)=>{
     return res.json("hello from backend");
 });
 app.use('/bran',branchRouter);
+app.use('/trainee',traineeRouter);
+app.use('/staff',staffRouter);
+app.use('/trainer',trainerRouter);
 /*const db=mysql.createConnection({ ////////////////////////////for test const syntaxes
     host:'127.0.0.1',
     user:'root',

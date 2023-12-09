@@ -1,0 +1,36 @@
+.animated-text {
+    transition: color 0.3s ease; /* Specify the transition property and duration */
+    user-select: none;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    background-size: cover;
+    position: absolute;
+    top: 90%;
+    left: 66%;
+    transform: translate(-50%, -50%);  
+    color: #E5E5E5;
+    font-family: Bebas Neue;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  
+  .animated-text.hovered {
+    /* Add other animation styles here */
+    user-select: none;
+    width: auto;
+    height: auto;
+    background-size: cover;
+    position: absolute;
+    top: 90%;
+    left: 66%;
+    transform: translate(-50%, -50%);  
+    color: #FFD400;
+    font-family: Bebas Neue;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
