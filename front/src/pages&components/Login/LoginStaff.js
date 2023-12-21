@@ -13,6 +13,7 @@ const StaffLogin = () => {
     const data = res.token;
     localStorage.setItem("token", res.data.token);
     console.log(res.data.token);
+    alert("logged in successfully")
   }
   const [response, setResponse] = useState(null);
   ;

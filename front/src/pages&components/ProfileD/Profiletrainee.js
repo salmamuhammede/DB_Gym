@@ -6,68 +6,47 @@ import sql from '../assets/sql.png'
 import Trainernavbar from './Trainernavbar';
 import trainer from '../assets/trainer.png'
 import gymtrainer from '../assets/gymtrainer.jpeg'
-const Profile =()=>
-{
-  
- 
-  /*const trainerData = {
-   
-    
-    name: 'AYA MOHAMED ALI',
-    email: 'john@example.com',
-    phoneNumber: '+1234567890',
-    birthdate: 'January 1, 1980',
-    address: '123 Trainer Street, City',
-    gender: 'Female',
-    startDate: 'January 1, 2020',
-    experienceYears: '5 years',
-    specializations: 'Weightlifting, Cardio',
-    salary: '$50,000',
-  };*/
-   const [name, setName] = useState("");
+const Profiletrainee =()=>
+{  
+   const [Fname, setFName] = useState("");
+   const [Mname, setMName] = useState("");
+   const [Lname, setLName] = useState("");
      const [email, setEmail] = useState("");
       const [phoneNumber, setphoneNumber] = useState(0);
       const [birthdate, setbirthdate] = useState("");
       const [address, setaddress] = useState("");
      const [Gender, setGender] = useState("");
-     const [startDate, setstartDate] = useState("");
-   const [experienceYears, setexperienceYear] = useState("");
-     const [specializations, setspecialization] = useState([]);
-     const [salary, setsalary] = useState(0);
+     const [BloodType, setBloodType] = useState("");
+   const [SID, setSID] = useState(0);
+    
+     
 
 
      const fetchData = async () => {
       try {
           const response = await axios({
               method: "get",
-              url: "http://localhost:8082/trainer/profile",
+              url: "http://localhost:8082/trainee/profile",
               headers: {
                   Authorization: `Bearer ${localStorage.getItem("token")}`
               },
 
-          })
-          const response2=  await axios({
-            method: "get",
-            url: "http://localhost:8082/trainer/specializations",
-            headers: {
-                Authorization: `Bearer ${localStorage.getItem("token")}`
-            },
-
-        })
-          //console.log(response.data);
+          })          
+         
           let ob = response.data;
 
 
-          setName(ob.FName);
+          setFName(ob.FName);
+          setMName(ob.MName);
+          setLName(ob.LName);
           setEmail(ob.Email);
-          setphoneNumber(ob.PhoneNumber);
+          setphoneNumber(ob.Phone);
           setGender(ob.Gender);
-          setbirthdate(ob.BirthDate);
-          setsalary(ob.Salary);
-          setexperienceYear(ob.EXP_Years);
-          setstartDate(ob.StartDate);
+          setbirthdate(ob.BIrthDate);
+          setBloodType(ob.BloodType);
+          setSID(ob.SID);
           setaddress(ob.Address);
-          setspecialization(response2.data);
+          
 
 
       }
@@ -104,7 +83,7 @@ return (
 <p className='value' >{email}</p>
 <br/>
 
-<p className='type'>phoneNumber:</p>
+<p className='type'>Phone Number:</p>
 <p className='value' >{phoneNumber}</p>
 <br/>
 <p className='type'>Birthdate:</p>
@@ -114,28 +93,14 @@ return (
 <p className='value'>{address}</p>
 <br/>
 
-<p className='type'>startDate:</p>
-<p className='value'>{startDate.substring(0,10)}</p>
+<p className='type'>BloodType:</p>
+<p className='value'>{BloodType}</p>
 <br/>
-<p className='type'>experienceYears:</p>
-<p className='value'>{experienceYears}</p>
+<p className='type'>Monitor Id:</p>
+<p className='value'>{SID}</p>
 <br/>
-<p className='type'>Specializations:</p>
-
-{specializations.map((element) => {
-  return (
-    <div>
-    <p className='value'>{element["Nme"]}</p><br/>
-    </div>
-  );
-})}
-
-<p className='type'>Salary:</p>
-<p className='value'>{salary}</p>
 </div>
-
-<h1>{name}</h1>
-
+<h1>{Fname+" "+Mname+" "+Lname}</h1>
 </div>
 
 
@@ -160,4 +125,4 @@ return (
     </div>
 );
 };
-export default Profile;
+export default Profiletrainee;

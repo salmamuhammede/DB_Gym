@@ -12,6 +12,7 @@ const Login = () => {
     const data = res.token;
     localStorage.setItem("token", res.data.token);
     console.log(res.data.token);
+    alert("logged in successfully");
   }
   async function login(event) {
     event.preventDefault();
@@ -66,6 +67,12 @@ const Login = () => {
                 <button className="btn1" type="submit">
                   Login
                 </button>
+                <Link to="/Profiletrainee">
+        <button className="btn1">
+          Profile
+        </button>
+      </Link>
+      
               </card>
             </div>
           </form>

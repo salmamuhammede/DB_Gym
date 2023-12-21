@@ -1,5 +1,8 @@
 .main-profile {
-    background-color:#BCBEC0;
+    /*background-color:#BCBEC0;*/
+    background-image:url('../assets/pluredbackground.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
 height: 100vh;
 width: 1483px;
 }
@@ -96,6 +99,7 @@ color: yellow;
   height: 500px;
   top: 209px;
   background-color: #BA9E16;
+ opacity:0.6;
   border-top-right-radius: 55px;
   border-top-left-radius: 55px;
   

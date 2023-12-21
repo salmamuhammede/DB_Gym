@@ -59,6 +59,20 @@ const Traineecontroller = {
         console.log(error);
         res.status(500).json({ error: "An error occurred while fetching your data." });
 
-    }}
+    }},
+    loadProfile:(req, res) => {
+      try {
+          const id=req.user.TID;
+          const qu=`SELECT * FROM trainee  where TID=${id}`;
+          db.query(qu, (err, data) => {
+              if (err) return res.json(err);
+              else 
+                  return res.json(data[0])});
+             
+      } catch (error) {
+          console.log(error);
+          res.status(500).json({ error: "An error occurred while fetching your data." });
+  
+      }},
 };
 export default Traineecontroller;

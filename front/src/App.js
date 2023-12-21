@@ -5,7 +5,7 @@ import Profile from './pages&components/ProfileD/Profile'
 import PrintPdf from './pages&components/ProfileD/Printid'
 import Login from './pages&components/Login/Login';
 import Home from '../src/pages&components/home copy/Home'
-
+import Profiletrainee from './pages&components/ProfileD/Profiletrainee';
 function App() {
   return (
     <Router>
@@ -16,6 +16,7 @@ function App() {
           <Route  path='/TrainerPrint' element={<PrintPdf/>} />  
           <Route  path='/TraineeLogin' element={<Login/>} />  
           <Route  path='/StaffLogin' element={<StaffLogin/>} />  
+          <Route  path='/Profiletrainee' element={<Profiletrainee/>} />  
          
             
             
